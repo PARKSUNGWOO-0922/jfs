@@ -49,7 +49,7 @@ github(깃허브->저장소(레퍼지토리))->파일/폴더 저장공간 확보
 ctrl + / : 주석
 ------------------------------
 w3schoos
-mdm?
+mdn:초보추천(위보다) https://developer.mozilla.org/ko/
 https://docs.emmet.io/cheat-sheet/----그냥 emmet검색해
 ex)h1+p+a+img
 블록레벨 요소 : h1, p
@@ -60,6 +60,8 @@ HTML요소(elemnt) = tab(태그)는 요소의 일종
 행복사 : shift+alt +아래위방향키 
 강사공유주소:
 https://www.figma.com/design/RgpZyMER95KoiQQYR07Lrv/%EA%B0%9C%EC%9D%B8%EC%82%AC%EC%9D%B4%ED%8A%B8?node-id=0-1&t=XeCjoZCFRzxLO8ku-1
+강사 git주소
+https://github.com/fs-class-n/jfs
 ===========================
 과제
 git bash열기(디렉토리 우측클릭)
