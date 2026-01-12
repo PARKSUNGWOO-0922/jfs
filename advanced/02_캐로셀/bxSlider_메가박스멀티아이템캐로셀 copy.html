@@ -15,11 +15,22 @@
         margin: 0;
         padding: 0;
       }
+      #section .inner {
+        min-width: 1200px;
+        margin: 0 auto;
+      }
+      /* 섹션 제목 서식 지정 */
+      #section h2 {
+        padding: 50px 0;
+        font-size: 28px;
+        font-weight: normal;
+        margin-bottom: 24px;
+      }
       /* .bxslider의 조상 div */
        .bx-wrapper{
         background-color: none;
         border: none; 
-        box-shadow: none;
+        color: #351f66;
 
        }
        /* 좌우 버튼 */
@@ -43,19 +54,24 @@
 
 </head>
 <body>
-    <div class="bxslider">
-  <div><img src="assects/bg-main-boutiq.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-comfort.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-dolbyatmos.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-dolbycinema.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-dva.png"></div>
-  <div><img src="assects/bg-main-red.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-mx4d.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-private.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-recliner.png" alt="이미지1" /></div>
-  <div><img src="assects/bg-main-suite.png" alt="이미지1" /></div>
- 
-</div>
+  <div id="section">
+    <div class="inner">
+      <h2>메가박스 안내</h2>
+        <div class="bxslider">
+      <div><img src="assects/bg-main-boutiq.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-comfort.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-dolbyatmos.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-dolbycinema.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-dva.png"></div>
+      <div><img src="assects/bg-main-red.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-mx4d.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-private.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-recliner.png" alt="이미지1" /></div>
+      <div><img src="assects/bg-main-suite.png" alt="이미지1" /></div>
+    
+      </div>
+    </div>
+  </div>
 <script>
       $('.bxslider').bxSlider({
     auto: true,//자동슬라이드
