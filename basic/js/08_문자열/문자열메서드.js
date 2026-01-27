@@ -54,8 +54,16 @@ console.log(t.replace("apple", "banana"));//결과: banana apple apple
 // 문자열.repalce(/문자열/g,"문자열")
 //g는 grobal
 t = "apple apple apple";
-console.log(t.replace(/apple/g, "banana"));
-// banana banana banana
+console.log(t.replace(/apple/g, "banana"));// banana banana banana
+
+//자바스크립트에서 슬래시(/ /)로 감싸진 부분은 문자열이 아니라 정규식 리터럴이라는 특수한 데이터 타입으로 인식됩니다.
+
+
+///apple/: 찾을 대상인 패턴입니다. 여기서는 "apple"이라는 글자 뭉치를 찾으라는 뜻입니다.
+//g (Flag): 가장 중요한 부분입니다! Global(전역)의 약자입니다.
+//g가 없으면: 문장에서 첫 번째로 발견된 "apple" 하나만 "banana"로 바꾸고 종료합니다.
+//g가 있으면: 문장 전체를 샅샅이 뒤져서 나오는 모든 "apple"을 전부 "banana"로 바꿉니다.
+
 
 
 
