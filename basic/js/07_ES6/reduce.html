@@ -14,7 +14,7 @@
         arr.reduce((누적값, 현재값, 인덱스, 원본배열) => {
             // 실행 로직
                 return 새로운누적값;
-            }, 초기값);
+            }, {초기값});
        */
 
       const numbers = [1, 2, 3, 4];
@@ -28,11 +28,20 @@
 
       // 배열 내에 중복 요소 개수 세기~ 
       const fruits = ["apple", "banana", "apple", "orange", "banana"];
-
+      //reduce는 배열,객체는 객체로 반환한다.
       const count = fruits.reduce((acc, fruit) => {
         //앞의 값이 “truthy”면 → 앞값을 그대로 반환
         //앞이 falsy이면 → 뒤 값을 반환
         acc[fruit] = (acc[fruit] || 0) + 1;
+        //우리가 acc["apple"]이라고 쓰는 것은 "이 공책에서 'apple'이라는 제목이 적힌 칸의 숫자를 알려줘"라고 요청하는 것입니다
+
+        //자바스크립트는 || 연산자를 만났을 때, 왼쪽 값이 Falsy(거짓 같은 값)이면 무조건 오른쪽 값을 봅니다. 
+        // Falsy 값들: undefined, null, 0, ""(빈 문자열), false, NaN
+        // 해석 방식: A || B-> "A가 쓸만한 값(True)이면 A를 쓰고, A가 비어있거나 이상하면(Falsy) B를 써라." 
+        // 그런데 A && B -> A가 쓸만한값(True)이면 B값을 쓰고, 아니면 그냥 끝.
+        // 1.acc["apple"] ->"없어! (undefined)
+        // 2."undefined || 0 ->"없으면 대신 0으로 칠게."
+        // 3.0 + 1 -> "자, 이제 처음으로 하나 생겼으니 1이라고 적자!"
         //acc[cur]은 속성이름이 cur의 값으로 정해진다
         //예)acc['apple']=1 -> {apple:1}
         return acc;
@@ -44,6 +53,18 @@
       // 2차원 배열 → 1차원 배열(평탄화):reduce+concat
       const arr = [[1, 2], [3, 4], [5]];
       const flat = arr.reduce((acc, cur) => acc.concat(cur), []);
+      /*
+         중괄호와 return이 있는 정석 버전
+          const flat = arr.reduce((acc, cur) => {
+               return acc.concat(cur); 
+          }, []);
+          자바스크립트 화살표 함수에서는 return 할 내용이 딱 한 줄이면, { }와 return을 통째로 생략할 수 있습니다.
+          끝에 [] : 내가 만들고 싶은 완성품의 모양"이 무엇이냐에 따라 결정, 위는 apple:1 였기때문에 {}
+
+          const arr = [[1, 2], [3, 4], [5]];
+          const flat = arr.flat(); // 훨씬 간단한 최신 문법
+          console.log(flat); // [1, 2, 3, 4, 5]
+      */
       console.log(flat); // [1, 2, 3, 4, 5]
 
       //React 장바구니 합계[객체배열]
