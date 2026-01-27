@@ -58,11 +58,21 @@
         },
       };
 
-      const {
-        address: { city },//왼쪽address는 변수가아니라 “user3에서 address 속성을 찾아라”는 의미임.
-      } = user3;
+      const { address: { city }, } = user3;
+        /*
+          1.경로 탐색: user3 객체 안에서 address라는 키(key)를 찾습니다.
+          2.안으로 진입: address 객체 내부로 들어가 다시 city라는 키를 찾습니다.
+          3.변수 생성 및 할당: 찾은 city의 값인 "서울"을 추출하여, city라는 이름의 새로운 상수에 할당합니다.
+
+          *주의할 점은 address라는 이름의 변수는 생성되지 않습니다. 오직 최종 목적지인 city 변수만 만들어집니다.
+
+          const { address: { city : homeTown }, } = user3;
+          const { address: { city : homeTown }, } = user3;
+          console.log(homeTown);// 서울
+        */
 
       console.log(city); // 서울
+      
     </script>
   </body>
 </html>
