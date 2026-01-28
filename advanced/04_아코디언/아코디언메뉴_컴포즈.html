@@ -49,29 +49,31 @@
             background: yellow;
         }
 
-       /* header .inner {
+        header .inner {
             position: absolute;
-            right: -100%;
+            right: 0%;
             width: 80%;
             height: 100vh;
             overflow-y: auto;
             padding-top: 80px;
             background: #fff;
             transition: .3s;
+            background-color:burlywood;
         }
+        
         header .inner.active {
             right:0;
         }
-
+        
         /* 1depth */
-        /* .main>li {
+         .main>li {
             border-bottom: 1px solid #d9d9d9;
             padding: 0px 0px;
         }
 
         .main>li>a {
             position: relative;
-            font-size: 16px;
+            font-size: 1rem;
             color: #333;
             display: block;
             padding: 16px 24px;
@@ -84,7 +86,7 @@
         .main>li.active>a {
             color: #fed900;
         }
-
+        /* 메인메뉴 끝 + 모양 */
         .main>li>a::before {
             content: "";
             width: 2px;
@@ -110,10 +112,10 @@
 
         .newIcon {
             margin-left: 8px;
-        } */
+        } 
 
         /* 2depth */
-        /* .sub li:not(:last-child) {
+         .sub li:not(:last-child) {
             border-bottom: 1px solid #eee;
         }
 
@@ -138,25 +140,25 @@
 
         .sub li a:hover::before {
             transform: scaleX(1);
-        } */
+        } 
 
-        /* .sub-wrapper {
+        .sub-wrapper {
             display: grid;
             grid-template-rows: 0fr;
-            /* 초기 상태: 높이 0 
+            /* 초기 상태: 높이 0 */
             transition: grid-template-rows 0.3s ease-out;
             background: #f9f9f9;
-        } */
+        }
 
         /* 활성화 시 내용만큼 높이 늘어남 */
-       /* .main>li.active .sub-wrapper {
+       .main>li.active .sub-wrapper {
             grid-template-rows: 1fr;
         }
  
-        .sub {
+         .sub {
             overflow: hidden;
         }
-
+        /* 위아래 패딩 적용 */
         .sub li a {
             display: block;
             padding: 10px 30px;
@@ -165,7 +167,7 @@
 
         .sub li a:hover {
             background: #eee;
-        } */
+        }
 
         /* 유틸: SNS 기타 */
         /* header .util {
