@@ -25,26 +25,35 @@
         const d1 = new Date();
         // 날짜 기준: 1970-01-01 00:00:00.00
         // 3000은 3000밀리초(ms)
-        const d2 = new Date(1491803527400);
+        const d2 = new Date(1769590451530);
         // 월은 0(January)~11(December),
-        const d3 = new Date("October 15, 2018 06:18:07");
-        const d4 = new Date(2018, 11, 25, 18, 30, 29);
+        const d3 = new Date("January 28, 2026 17:45:57");
+        const d4 = new Date(2026, 0, 28, 17, 45, 57);
 
         // 객체
-        console.log(d1);
-        console.log(d2);
-        console.log(d3);
-        console.log(d4);
+        /*
+            1. 한눈에 보는 비교구분
+                            Date.now()                            d1.getTime()
+            형태        정적 메서드 (Static Method)         인스턴스 메서드 (Instance Method)
+            객체생성여부 new Date()를 만들 필요 없음         반드시 new Date() 객체가 먼저 있어야 함
+            용도**"지금 이 순간"**의 시간을 빨리 잴 때         **"특정 날짜"**의 숫자를 알고 싶을 때
+        
+        */
+        console.log(Date.now());//1769590451530
+        console.log(d1); //Wed Jan 28 2026 17:48:27
+        console.log(d2); //Wed Jan 28 2026 17:45:57
+        console.log(d3); //Wed Jan 28 2026 17:45:57
+        console.log(d4); //Wed Jan 28 2026 17:45:57
 
         // 메서드
-        console.log(d1.getFullYear());
-        console.log(d1.getMonth() + 1);
-        console.log(d1.getDate());
-        console.log(d1.getDay());
-        console.log(d1.getHours());
-        console.log(d1.getMinutes());
-        console.log(d1.getSeconds());
-        console.log(d1.getMilliseconds());
+        console.log(d1.getFullYear());//2026
+        console.log(d1.getMonth() + 1);//1
+        console.log(d1.getDate());//28
+        console.log(d1.getDay()); //3
+        console.log(d1.getHours());//17
+        console.log(d1.getMinutes());//57
+        console.log(d1.getSeconds());//52
+        console.log(d1.getMilliseconds());//55
         console.log('1970-1-1 이후 현재까지 몇 초가 지났나요?' + d1.getTime() + '밀리초가 지났습니다.');
         console.log('1970-1-1 이후 현재까지 몇 일이 지났나요?' + d1.getTime()/1000/60/60/24 + '일 지났습니다.');
 
