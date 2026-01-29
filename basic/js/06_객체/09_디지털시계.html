@@ -14,7 +14,8 @@
       const day = `${today.getMonth() +1}월 ${today.getDate()}일 `;
       const time = `${today.getHours()}시 ${today.getMinutes()}분 ${today.getSeconds()}초`;
       
-       console.log(day + time);
+      document.getElementById('digClock').innerHTML = day + time;
+      // console.log(day + time);
       // window 객체의 메서드, 함수
       // setInterval(콜백함수, 시간(ms:밀리초))
 
