@@ -87,31 +87,34 @@
 
     */
 
-    // p 생성
+    // p,img,button 태그 생성
     const p2 = document.createElement('p');
     const img = document.createElement('img');
     const img2 = document.createElement('img');
     const btn = document.createElement('button');
 
     // 요소 복제
+    // 생성한 버튼(btn)을 기반으로 btn2, btn3를 복제했습니다 
     const btn2 = btn.cloneNode();
     const btn3 = btn.cloneNode();
 
     // 텍스트 노드 생성
     const text = document.createTextNode('나두보이니?');
+    //"나두보이니?"라는 글자 덩어리를 만들어 text 에저장
+    // 텍스트 노드는 만든 후 반드시 appendChild로 어딘가에 조립해줘야 화면에 나옵니다. (코드의 p2.appendChild(text)처럼요.)
     
     // p1 선택
     const p1 = document.querySelector('p');
 
-    // body에 만든 태그 자식요소로 붙히기(p1에 자식으로 p2추가)
+    // 생성한 태그들을 document.body의 자식으로 찰딱 붙여서 실제 HTML 문서의 일부로 편입시켰습니다.
     document.body.appendChild(p2);
     document.body.appendChild(img);
     document.body.appendChild(img2);
     document.body.appendChild(btn);
     document.body.appendChild(btn2);
     document.body.appendChild(btn3);
-    p2.appendChild(text);
-    btn.textContent = '숨기기';
+    p2.appendChild(text);//text를 p2에 넣는다.
+    btn.textContent = '숨기기';// 해당 태그 안의 내용을 바로 수정
     btn2.textContent = '보이기';
     btn3.textContent = '보이기/숨기기';
 
@@ -120,13 +123,18 @@
     img2.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png';
 
     img.setAttribute('width', '150px');
-        const w100 = img.getAttribute('width');
-        img2.setAttribute('width', w100);
+    // setAttribute로 너비(width)를 조작
+    const w100 = img.getAttribute('width');
+    // getAttribute로 첫 번째 이미지의 너비를 읽어와서 
+    img2.setAttribute('width', w100);
+    // 두 번째 이미지에 똑같이 적용했습니다.
+
 
     // 이미지에 테두리 지정
     img.style.border = '5px solid red';
 
     // 이벤트
+    // .dn 는 css 에 'display none'로 정의되어있다.
     btn.addEventListener('click', ()=>{
     // <img class = "dn">
       // img.style.display = 'none';
